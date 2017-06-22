@@ -1,0 +1,23 @@
+@prefix cert: <http://www.w3.org/ns/auth/cert#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+
+<>
+    a foaf:PersonalProfileDocument ;
+    foaf:maker <#me> ;
+    foaf:primaryTopic <#me> .
+
+<#me>
+    a foaf:Person ;
+    a schema:Person ;
+    foaf:name "sabol@example.com" ;
+    foaf:knows <http://esterline.ncat.edu/esterline#i> ;
+    cert:key <#public_key> .
+
+<#public_key> 
+    a cert:RSAPublicKey;
+    rdfs:label "from my laptop";
+    cert:modulus "testtesteststs"^^xsd:hexBinary;
+    cert:exponent 65537 .

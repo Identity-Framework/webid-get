@@ -1,0 +1,19 @@
+{
+  "name": "webid-get",
+  "version": "1.0.0",
+  "description": "Simple webid cert and profile provisioner",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cory Sabol",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "node-forge": "^0.7.1",
+    "rdflib": "^0.15.0",
+    "webid": "git://github.com/Identity-Framework/node-webid.git#cssabol-patch"
+  }
+}
